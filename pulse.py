@@ -182,7 +182,7 @@ class Bruter(TorManager,Browser):
 
   subprocess.call(['clear'])
   print '\n  {}[-] Web-Site: {}{}'.format(self.n,self.b,self.siteName)
-  print '  {}[-] Proxy Ip: {}{}'.format(self.n,self.b,ip)
+  #print '  {}[-] Proxy Ip: {}{}'.format(self.n,self.b,ip)
   print '  {}[-] Wordlist: {}{}'.format(self.n,self.b,self.wordlist)
   print '  {}[-] Username: {}{}'.format(self.n,creds,self.username.title())
   print '  {}[-] Password: {}{}'.format(self.n,creds,pwd)
@@ -192,11 +192,11 @@ class Bruter(TorManager,Browser):
    print '  {}[-] Account Locked: {}{}'.format(self.n,color,self.locked)
   print '\n  {}+-------------------+{}\n'.format(self.r,self.n)
 
-  if not ip:
-   print '  [-] Obtaining Proxy IP {}...{}'.format(self.g,self.n)
-   self.changeIp()
-   time.sleep(1.3)
-   self.display()
+  #if not ip:
+   #print '  [-] Obtaining Proxy IP {}...{}'.format(self.g,self.n)
+   #self.changeIp()
+   #time.sleep(1.3)
+   #self.display()
 
 def main():
  # assign arugments
@@ -210,11 +210,11 @@ def main():
  engine = Bruter(args.site.lower(),args.username,args.wordlist)
 
  # does tor exists?
- if not os.path.exists('/usr/sbin/tor'):
-  try:engine.installTor()
-  except KeyboardInterrupt:engine.kill('Exiting {}...{}'.format(self.g,self.n))
-  if not os.path.exists('/usr/sbin/tor'):
-   engine.kill('Please Install Tor'.format(engine.y,engine.r,engine.n))
+ #if not os.path.exists('/usr/sbin/tor'):
+  #try:engine.installTor()
+  #except KeyboardInterrupt:engine.kill('Exiting {}...{}'.format(self.g,self.n))
+  #if not os.path.exists('/usr/sbin/tor'):
+   #engine.kill('Please Install Tor'.format(engine.y,engine.r,engine.n))
 
  # does the account exists?
  if not engine.exists(engine.username):
